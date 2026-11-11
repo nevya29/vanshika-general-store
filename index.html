@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanshika General Store | Online Shopping</title>
+    <title>Vanshika General Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Navigation Header -->
     <header>
-        <div class="logo-container">
+        <div class="logo">
             <h1>Vanshika General Store</h1>
-            <p class="tagline">Traditional Quality, Delivered to Your Door</p>
         </div>
         <nav>
             <ul>
@@ -26,34 +25,27 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="header-right">
-            <input type="text" id="search-input" placeholder="Search products...">
+        <div class="header-controls">
+            <input type="text" id="search-bar" placeholder="Search products...">
             <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Welcome to Vanshika General Store</h2>
-            <p>Explore our handpicked collection of warm woollens, exquisite jewellery, beauty essentials, and unique gifts.</p>
-            <a href="#catalogue" class="cta-button">Shop Collection</a>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Your Local Neighborhood Store</h2>
+        <p>Quality woollens, knitting supplies, beauty products, and everyday gifts delivered to your doorstep.</p>
     </section>
 
-    <!-- Product Catalogue Section -->
+    <!-- Product Catalogue -->
     <main id="catalogue">
         <h2>Our Products</h2>
-        <p class="sample-notice">Note: Displayed products and prices are samples for demonstration.</p>
-        
-        <!-- Product Grid where JavaScript will load items -->
         <div id="product-grid" class="product-grid">
-            <!-- Product cards will be dynamically inserted here -->
+            <!-- Dynamic JavaScript content loads here -->
         </div>
     </main>
 
-    <!-- Shopping Cart Sidebar / Modal Area (Placeholder for later) -->
-    <!-- Shopping Cart Sidebar / Modal Area -->
+    <!-- Shopping Cart Modal -->
     <div id="cart-modal" class="cart-modal hidden">
         <div class="cart-content">
             <h3>Your Shopping Cart</h3>
@@ -69,7 +61,8 @@
             </div>
         </div>
     </div>
-<!-- Checkout Modal -->
+
+    <!-- Checkout Modal -->
     <div id="checkout-modal" class="cart-modal hidden">
         <div class="cart-content">
             <h3>Delivery & Checkout</h3>
@@ -103,6 +96,7 @@
             </form>
         </div>
     </div>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
@@ -112,6 +106,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
