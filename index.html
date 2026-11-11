@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanshika General Store | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <h1>Vanshika General Store</h1>
+            <p class="tagline">Traditional Quality, Delivered to Your Door</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#woollens">Woollens</a></li>
+                <li><a href="#knitting">Wool & Knitting</a></li>
+                <li><a href="#hair">Hair Accessories</a></li>
+                <li><a href="#jewellery">Jewellery</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#gifts">Gifts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Vanshika General Store</h2>
+            <p>Explore our handpicked collection of warm woollens, exquisite jewellery, beauty essentials, and unique gifts.</p>
+            <a href="#catalogue" class="cta-button">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Product Catalogue Section -->
+    <main id="catalogue">
+        <h2>Our Products</h2>
+        <p class="sample-notice">Note: Displayed products and prices are samples for demonstration.</p>
+        
+        <!-- Product Grid where JavaScript will load items -->
+        <div id="product-grid" class="product-grid">
+            <!-- Product cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Shopping Cart Sidebar / Modal Area (Placeholder for later) -->
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-content">
+            <h3>Your Shopping Cart</h3>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <div class="cart-total">
+                <p>Total: ₹<span id="cart-total-price">0</span></p>
+            </div>
+            <button id="close-cart">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Vanshika General Store</h3>
+            <p>Local delivery across our city. Contact details and business policies coming soon.</p>
+            <p>&copy; 2026 Vanshika General Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
