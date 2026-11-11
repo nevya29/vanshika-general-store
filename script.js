@@ -156,3 +156,22 @@ closeCartBtn.addEventListener('click', () => {
 
 // Initial load
 displayProducts(products);
+// Category Filter Event Listeners
+const categoryLinks = document.querySelectorAll('.category-link');
+
+categoryLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selectedCategory = link.getAttribute('data-category');
+
+        // Clear search input when switching categories
+        searchInput.value = '';
+
+        if (selectedCategory === 'all') {
+            displayProducts(products);
+        } else {
+            const filtered = products.filter(product => product.category === selectedCategory);
+            displayProducts(filtered);
+        }
+    });
+});

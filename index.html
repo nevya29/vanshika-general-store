@@ -16,13 +16,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#woollens">Woollens</a></li>
-                <li><a href="#knitting">Wool & Knitting</a></li>
-                <li><a href="#hair">Hair Accessories</a></li>
-                <li><a href="#jewellery">Jewellery</a></li>
-                <li><a href="#beauty">Beauty</a></li>
-                <li><a href="#gifts">Gifts</a></li>
+                <li><a href="#" class="category-link" data-category="all">Home</a></li>
+                <li><a href="#" class="category-link" data-category="woollens">Woollens</a></li>
+                <li><a href="#" class="category-link" data-category="knitting">Wool & Knitting</a></li>
+                <li><a href="#" class="category-link" data-category="hair">Hair Accessories</a></li>
+                <li><a href="#" class="category-link" data-category="jewellery">Jewellery</a></li>
+                <li><a href="#" class="category-link" data-category="beauty">Beauty</a></li>
+                <li><a href="#" class="category-link" data-category="gifts">Gifts</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -53,6 +53,7 @@
     </main>
 
     <!-- Shopping Cart Sidebar / Modal Area (Placeholder for later) -->
+    <!-- Shopping Cart Sidebar / Modal Area -->
     <div id="cart-modal" class="cart-modal hidden">
         <div class="cart-content">
             <h3>Your Shopping Cart</h3>
@@ -62,10 +63,46 @@
             <div class="cart-total">
                 <p>Total: ₹<span id="cart-total-price">0</span></p>
             </div>
-            <button id="close-cart">Close</button>
+            <div class="checkout-actions" style="margin-top: 1rem;">
+                <button id="close-cart" class="secondary-btn">Close</button>
+                <button id="proceed-checkout-btn" class="cta-button" style="padding: 0.5rem 1.2rem;">Proceed to Checkout</button>
+            </div>
         </div>
     </div>
-
+<!-- Checkout Modal -->
+    <div id="checkout-modal" class="cart-modal hidden">
+        <div class="cart-content">
+            <h3>Delivery & Checkout</h3>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="cust-name">Full Name</label>
+                    <input type="text" id="cust-name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="cust-phone">Phone Number</label>
+                    <input type="tel" id="cust-phone" required placeholder="Enter phone number for delivery updates">
+                </div>
+                <div class="form-group">
+                    <label for="cust-address">Delivery Address</label>
+                    <textarea id="cust-address" required placeholder="Enter street address, landmark, area"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Option</label>
+                    <select id="payment-method">
+                        <option value="cod">Cash on Delivery (Local)</option>
+                        <option value="upi_demo">Pay via UPI QR (Demo)</option>
+                    </select>
+                </div>
+                <div class="checkout-summary">
+                    <p>Total Amount: ₹<span id="checkout-total">0</span></p>
+                </div>
+                <div class="checkout-actions">
+                    <button type="button" id="close-checkout" class="secondary-btn">Cancel</button>
+                    <button type="submit" class="cta-button">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
